@@ -600,6 +600,7 @@ html {
     .buydata-img {
        border: 2px solid blue;
        width: 100% !important;
+       overflow: hidden;
     }
     .buydata-img img{
         width: 400px;

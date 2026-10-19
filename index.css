@@ -576,6 +576,11 @@ html {
     margin-top: 20px;
 }
 @media (max-width: 768px) {
+    main{
+        width: 100%;
+        border: 4px solid green;
+        overflow: hidden;
+    }
     .topbar{
         display: none;
     }
@@ -611,6 +616,23 @@ html {
     .otherservices{
         border: 1px solid red;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .sub3div{
+        border: 3px solid red;
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+    }
+    .watch{
+        border: 1px solid purple;
+        width: 100% !important;
+    }
+    footer{
+        width: 100% !important;
+    }
+    .fixed{
         display: flex;
         flex-direction: column;
     }

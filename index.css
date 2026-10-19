@@ -575,3 +575,33 @@ html {
     font-size: 12px;
     margin-top: 20px;
 }
+@media (max-width: 768px) {
+    .topbar{
+        display: none;
+    }
+    .bottomnav{
+        display: none
+    }
+    .bottombar{
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between
+    }
+    .quicktop{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .servicescontainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .buydata-img {
+       border: 2px solid blue;
+       width: 100% !important;
+    }
+    .buydata-img img{
+        width: 400px;
+    }
+}

@@ -575,65 +575,536 @@ html {
     font-size: 12px;
     margin-top: 20px;
 }
-@media (max-width: 768px) {
-    main{
+
+
+/* TABLET RESPONSIVE: 769px–1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
         width: 100%;
-        border: 4px solid green;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .topbar,
+    .bottombar {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .bottombar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .topnav,
+    .bottomnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .bottomnav li {
+        padding: 15px 5px;
+    }
+
+    .quicktop {
+        position: relative;
+        top: 0;
+        width: 90%;
+        margin: 25px auto;
+        padding: 25px;
+    }
+
+    .quicktop input {
+        max-width: 100%;
+    }
+
+    .servicescontainer {
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .servicescontainer > div {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .otherservices {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .leftservices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .sharedata,
+    .giftdata,
+    .entertainment,
+    .globuisness {
+        position: relative;
+        left: auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .gloshop {
+        padding: 40px 25px;
+    }
+
+    .overallshop {
+        position: relative;
+        right: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    .overallfind {
+        padding: 25px;
+    }
+
+    .watch {
+        position: relative;
+        height: auto;
+    }
+
+    .mortal {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .miniwatch {
+        max-width: 75%;
+    }
+
+    .main3div {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .sub3div {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .first,
+    .second,
+    .third {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+
+    .sub3div img {
+        width: 100%;
+        height: auto;
+    }
+
+    .lastsec {
+        position: relative;
+        max-width: 100%;
         overflow: hidden;
     }
-    .topbar{
+
+    .footer {
+        width: 100%;
+        padding: 40px 25px;
+    }
+}
+
+
+/* MOBILE RESPONSIVE: 768px AND BELOW */
+@media screen and (max-width: 768px) {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    /* TOP NAVIGATION */
+    .topbar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        z-index: 1100;
+    }
+
+    .topbar .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .topnav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0;
+    }
+
+    .topnav.is-open {
+        display: flex;
+    }
+
+    .topnav li {
+        width: 100%;
+    }
+
+    .topnav a {
+        display: block;
+        padding: 13px 18px;
+    }
+
+    .empty {
         display: none;
     }
-    .bottomnav{
-        display: none
-    }
-    .bottombar{
-        border: 1px solid red;
-        display: flex;
-        justify-content: space-between
-    }
-    .quicktop{
+
+    /* BOTTOM NAVIGATION */
+    .bottombar {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 15px;
+        position: relative;
+        z-index: 1000;
     }
+
+    .glologo img {
+        width: 42px;
+        height: auto;
+    }
+
+    .bottombar .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .bottomnav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin: 0;
+        padding: 8px 0;
+        background: #ffffff;
+    }
+
+    .bottomnav.is-open {
+        display: flex;
+    }
+
+    .bottomnav li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .bottomnav a {
+        display: block;
+        padding: 14px 12px;
+        text-decoration: none;
+    }
+
+    /* QUICK TOP-UP */
+    .quicktop {
+        position: relative;
+        top: 0;
+        width: calc(100% - 30px);
+        margin: 20px auto;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .quicktop input,
+    .quicktop button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* QUICK SERVICES */
     .servicescontainer {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         width: 100%;
+        padding: 15px;
+        gap: 18px;
     }
-    .buydata-img {
-       width: 100% !important;
-       overflow: hidden;
-    }
-    .buydata-img img{
+
+    .servicescontainer > div {
+        position: relative;
         width: 100%;
-    }
-    .leftservices{
-        display: flex;
-        flex-direction: column;
-    }
-    .otherservices{
-        border: 1px solid red;
+        min-width: 0;
+        height: 260px;
+        margin: 0;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
     }
-    .sub3div{
-        border: 3px solid red;
-        display: flex;
-        flex-direction: column;
-        width: 100% !important;
+
+    .servicescontainer img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-    .watch{
-        border: 1px solid purple;
-        width: 100% !important;
+
+    .servicescontainer h2,
+    .servicescontainer p {
+        max-width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
     }
-    footer{
-        width: 100% !important;
+
+    /* OTHER SERVICES */
+    .otherservices {
+        width: 100%;
+        padding: 15px;
     }
-    .fixed{
-        display: flex;
-        flex-direction: column;
+
+    .leftservices {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .sharedata,
+    .giftdata,
+    .entertainment,
+    .globuisness {
+        position: relative;
+        left: auto;
+        width: 100%;
+        min-width: 0;
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .sharedata {
+        grid-column: 1 / -1;
+    }
+
+    /* GLO SHOP */
+    .gloshop {
+        padding: 30px 15px;
+    }
+
+    .overallshop {
+        position: relative;
+        right: auto;
+        width: 100%;
+        height: auto;
+        padding: 25px 18px;
+    }
+
+    .gloshop p {
+        width: 100%;
+    }
+
+    /* FIND A STORE */
+    .overallfind {
+        width: 100%;
+        padding: 20px 15px 40px;
+    }
+
+    /* WATCH SECTION */
+    .watch {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .mortal {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .miniwatch {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px 18px;
+    }
+
+    /* NEWS CARDS */
+    .main3div {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .sub3div {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .first,
+    .second,
+    .third {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        position: relative;
+    }
+
+    .sub3div img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .sub3div p {
+        position: static;
+        padding: 10px 15px;
+    }
+
+    .sub3div h2 {
+        padding: 0 15px;
+    }
+
+    /* GLO CAFE */
+    .lastsec {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .lastsec img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .lastsec h2,
+    .lastsec p {
+        max-width: 88%;
+        left: 6%;
+    }
+
+    .lastsec br {
+        display: none;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        padding: 30px 15px 80px;
+        gap: 25px 12px;
+    }
+
+    .footer-column {
+        min-width: 0;
+    }
+
+    .footer-column li {
+        overflow-wrap: anywhere;
+    }
+
+    .copyright {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    /* FIXED BOTTOM BAR */
+    .fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1200;
+    }
+}
+
+/* EXTRA-SMALL PHONES */
+@media screen and (max-width: 400px) {
+
+    .quicktop {
+        width: calc(100% - 20px);
+        padding: 16px 12px;
+    }
+
+    .servicescontainer,
+    .otherservices {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .servicescontainer > div {
+        height: 235px;
+    }
+
+    .leftservices {
+        gap: 9px;
+    }
+
+    .sharedata,
+    .giftdata,
+    .entertainment,
+    .globuisness {
+        height: 190px;
+    }
+
+    .overallshop {
+        padding: 22px 14px;
+    }
+
+    .footer {
+        padding-left: 12px;
+        padding-right: 12px;
+        gap: 20px 8px;
     }
 }
